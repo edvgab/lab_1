@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+
+    <string name="button">Button</string>
+    <string name="secondActivityButton">Second Activity</string>
+    <string name="textfield">Text Field</string>
+</resources>
