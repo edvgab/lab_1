@@ -19,7 +19,7 @@ public class SecondActivity extends AppCompatActivity{
         setContentView(R.layout.secondactivitydesign);
         mylist = (ListView) findViewById(R.id.listView);
 
-        List<ListItem> items = new ArrayList<>();
+        List<ListItem> items = new ArrayList<ListItem>();
 
         Intent intent = getIntent();
         if (intent.getBooleanExtra("flag",true)){
@@ -28,7 +28,7 @@ public class SecondActivity extends AppCompatActivity{
             items.add(new ListItem("Jane", R.drawable.ic_announcment_black_48dp, "Physics, Informatics"));
             items.add(new ListItem("Bob", R.drawable.ic_alarm_black_48dp, "Mathematics, Informatics"));
             items.add(new ListItem("Clara", R.drawable.ic_account_box_black_48dp, "Geography, Chemistry"));
-            items.add(new ListItem("Sam", R.drawable.ic_accessibility_black_48dp, "Mathematics, Physics"));
+            items.add(new ListItem("Sam", R.drawable.ic_globe_black_48dp, "Mathematics, Physics"));
 
         }else{
 
@@ -42,11 +42,13 @@ public class SecondActivity extends AppCompatActivity{
             "properties and changes of matter"));
             items.add(new ListItem("Informatics", R.drawable.ic_account_box_black_48dp,
             "Informatics is the science of information and computer information system"));
-            items.add(new ListItem("Geography", R.drawable.ic_accessibility_black_48dp,
+            items.add(new ListItem("Geography", R.drawable.ic_globe_black_48dp,
                     "Geography is a field of science devoted to the study of lands " +
             "the features, the inhabitats, and the phenomena of Earth."));
 
+
         }
+
         adapter = new ListAdapter(this, items);
         mylist.setAdapter(adapter);
     }

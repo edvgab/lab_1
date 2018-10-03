@@ -3,10 +3,12 @@ package com.example.edlyas.myapplication;
 public class ListItem {
 
     private String title;
-    private  int imageId;
+    private int imageId;
     private String description;
 
-    public ListItem(String title, int ImageId, String description){
+    public ListItem(){}
+
+    public ListItem(String title, int imageId, String description){
         this.title = title;
         this.imageId = imageId;
         this.description = description;

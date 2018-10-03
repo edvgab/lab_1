@@ -9,12 +9,13 @@ import android.widget.Button;
 import android.widget.TextView;
 
 
-
 public class FirstActivity extends AppCompatActivity {
 
     private Button myButton;
-    private TextView mytextField;
     private Button secondActivityButton;
+    private TextView mytextField;
+
+
     private Context context = this;
 
     @Override
@@ -26,9 +27,10 @@ public class FirstActivity extends AppCompatActivity {
         secondActivityButton = (Button) findViewById(R.id.secondActivityButton);
         mytextField = (TextView)findViewById(R.id.textfield);
 
+
         myButton.setOnClickListener(myButtonClick);
-        secondActivityButton.setOnClickListener(startSecondActivity);
-        secondActivityButton.setOnLongClickListener(starSecondActivityLong);
+        secondActivityButton.setOnClickListener(startSecondActivity);  //jei trumpai nuspaustas
+        secondActivityButton.setOnLongClickListener(starSecondActivityLong);   //ilgas paspapaudimas
 
     }
     View.OnClickListener myButtonClick = new View.OnClickListener() {
