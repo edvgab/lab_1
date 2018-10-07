@@ -1,7 +1,15 @@
 <resources>
     <string name="app_name">My Application</string>
 
-    <string name="button">Button</string>
+
     <string name="secondActivityButton">Second Activity</string>
     <string name="textfield">Text Field</string>
+    <string name="first_name">First name</string>
+    <string name="second_name">Second name</string>
+    <string name="transfer">Transfer</string>
+    <string name="add">ADD</string>
+    <string name="description">Description</string>
+    <string name="title">Title</string>
+    <string name="third_activity">Third Activity</string>
+
 </resources>

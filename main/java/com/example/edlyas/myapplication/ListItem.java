@@ -6,8 +6,6 @@ public class ListItem {
     private int imageId;
     private String description;
 
-    public ListItem(){}
-
     public ListItem(String title, int imageId, String description){
         this.title = title;
         this.imageId = imageId;
