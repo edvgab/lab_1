@@ -3,10 +3,14 @@ package com.example.edlyas.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static java.util.ArrayList.*;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -18,12 +22,11 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.secondactivitydesign);
 
-
         mylist = (ListView) findViewById(R.id.listView);
 
-        List<ListItem> items = new ArrayList<ListItem>();
-
+        final List<ListItem> items = new ArrayList<>();
         Intent intent = getIntent();
+
         if (intent.getBooleanExtra("flag", true)) {
 
             items.add(new ListItem("Jack", R.drawable.ic_3d_rotation_black_48dp, "Mathematics, Chemistry"));
@@ -53,5 +56,18 @@ public class SecondActivity extends AppCompatActivity {
 
         adapter = new ListAdapter(this, items);
         mylist.setAdapter(adapter);
-    }
+
+        mylist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                items.remove(position);
+                adapter.notifyDataSetChanged();
+            }
+        });
+
+    }  //protected void
+
+
+
 }
+
